@@ -1,0 +1,5 @@
+# College Admission Toy Dataset Generator + Concept Bottleneck Model
+
+This repo contains python notebooks that generates **toy** college admissions data. `College_Admission_Generator.ipynb` was the original version of this dataset generator. Many attributes were not distributed correctly but it stands as the baseline generator for the updated `College_Admissions_Generator_latent.ipynb`. The latent generator differs from the original as the attribute generation is more refined to include less artifacting and more importantly incorporates latent variables that determine what used to be given attributes (which are now derivable as concepts).
+
+The first evaluator notebook (`College_Admission_Evaluator.ipynb`) runs a simple MLP to predict the concepts given the exogenous variables. `College_Admission_Evaluator_x_to_y.ipynb` builds a more complex Joint Concept Bottleneck Model that predicts concepts from exogenous variables and then uses the predicted concepts to predict college acceptance. 
